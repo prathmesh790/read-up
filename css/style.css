@@ -1,0 +1,78 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fefcea, #f1da36);
+}
+
+header, footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.2em;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 1em;
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 30px;
+    text-align: center;
+}
+
+#book-list, #cart-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.book, .cart-item {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    width: 250px;
+}
+
+.book:hover, .cart-item:hover {
+    transform: scale(1.05);
+}
+
+button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+input#search {
+    width: 60%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 30px;
+}
