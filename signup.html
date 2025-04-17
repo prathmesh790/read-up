@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #555;
+}
+</style>
+</head>
+<body>
+<div id="navbar">
+</div>
+<div id="sign">
+<h1 id="h121">Create an account</h1>
+<p id="p21">* Indicates required field</p>
+<div>
+<div>
+<p>First name*</p>
+<input id="name" placeholder="First name here" type="text"/>
+</div>
+<div>
+<p>Last name*</p>
+<input id="lastname" placeholder="Last name here" type="text"/>
+</div>
+</div>
+<div>
+<div>
+<p>Email address*</p>
+<input id="email" placeholder="yourname@example.com" type="text"/>
+</div>
+<!-- <div>
+                <p>Last name*</p>
+                <input type="text" placeholder="Last name here">
+            </div> -->
+</div>
+<div>
+<div>
+<p> Password* (At least 7 characters) </p>
+<input id="pass" placeholder="Please enter a minimum of 7 characters" type="text"/>
+</div>
+<div>
+<p>Confirm password* </p>
+<input id="pass2" placeholder="Please reenter your password" type="text"/>
+</div>
+</div>
+</div>
+<div id="sign1">
+<h2 id="h21">Text Message (SMS) Alerts: (Optional)</h2>
+<p id="p21"><input type="checkbox"/> Do you want to sign up for Shopper alerts from SHOP.COM? (Message and data rates may apply.)</p>
+<div id="ref1">
+<p>Enter a mobile number</p>
+<input placeholder="Please enter your 10 digit phone number (i.e. 999 999 9999)" type="text"/>
+</div>
+<div id="ref">
+<p>Were you referred by a friend?</p>
+<p>Enter their email address (Optional)</p>
+<input id="ref2" placeholder="" type="text"/>
+</div>
+<h2 id="h21">Email deals: (Optional)</h2>
+<p id="p21"><input type="checkbox"/> Do you want to sign up for sweet email offers and discounts from SHOP.COM?</p>
+<p id="p21"><input type="checkbox"/> Do you want to sign up for sweet email offers and discounts from MarketAmerica.com and its brands?</p>
+<h3>Also, please confirm you are not a robot:</h3>
+<div id="main12">
+<p id="p22"><input type="checkbox"/>I'am not robot</p>
+<div><img alt="" src="data:image/png;base64,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"/><p>Privacy - Term</p></div>
+</div>
+<button id="btnl1">Create your new account</button>
+<p id="plast">By creating an account, you are agreeing to our <a class="a1" href=""> Terms of Service</a> and <a class="a1" href=""> Terms of Service</a></p>
+</div>
+<div id="foot">
+</div>
+</body>
+</html>
+<script src="/scripts/signUp.js" type="module"></script>
